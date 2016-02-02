@@ -1,0 +1,76 @@
+@import "compass/css3";
+@charset "utf-8";
+
+@mixin linear-gradient($fromColor, $toColor) {
+  background-color: $toColor;
+  background-image: -webkit-linear-gradient($fromColor, $toColor);
+  background-image:    -moz-linear-gradient($fromColor, $toColor); 
+  background-image:     -ms-linear-gradient($fromColor, $toColor);
+  background-image:         linear-gradient($fromColor, $toColor);
+}
+
+@mixin linear-gradient2($fromColor,$toColor,$img) {
+  background-color: $toColor;
+  background: -webkit-linear-gradient($fromColor, $toColor),$img;
+  background:    -moz-linear-gradient($fromColor, $toColor),$img;
+  background:     -ms-linear-gradient($fromColor, $toColor),$img;
+  background:         linear-gradient($fromColor, $toColor),$img;
+}
+
+$sprites-spacing: 10px;
+$sprites-layout: horizontal;
+$font1: Arial,Helvetica,'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','Meiryo UI','メイリオ','ＭＳ Ｐゴシック',sans-serif;
+$font2: "Arial Black";
+
+#jqm_page_index{
+ min-height: 0 !important;
+}
+
+@import "html5reset";
+
+html {
+	min-height: 100%;
+}
+
+body {
+	font-size: 10px;
+	min-height: 100%;
+	font-family:$font1;
+	&.bg {
+		background: url(../images/bg.jpg) top center no-repeat fixed;
+		background-size: 100% 100%;
+	}
+}
+
+@keyframes rotate {
+	0% { transform:rotate(-90deg);}
+	10% { transform:rotate(-90deg);}
+	90% { transform:rotate(0deg);}
+	100% { transform:rotate(0deg);}
+}
+@-webkit-keyframes rotate {
+	0% { -webkit-transform:rotate(-90deg);}
+	10% { -webkit-transform:rotate(-90deg);}
+	90% { -webkit-transform:rotate(0deg);}
+	100% { -webkit-transform:rotate(0deg);}
+}
+@keyframes mark1 {
+	0% { top:24px; left:26px;background:#d62e2e;}
+	100% {  top:27px; left:33px;background:#18c42d;}
+}
+@keyframes mark2 {
+	0% { top:25px; left:26px;background:#d62e2e;width:30px;}
+	100% { top:31px; left:23px;background:#18c42d;width:20px;}
+}
+@-webkit-keyframes mark1 {
+	0% { top:24px; left:26px;background:#d62e2e;}
+	100% {  top:27px; left:33px;background:#18c42d;}
+}
+@-webkit-keyframes mark2 {
+	0% { top:25px; left:26px;background:#d62e2e;width:30px;}
+	100% { top:31px; left:23px;background:#18c42d;width:20px;}
+}
+
+.ui-loader {
+  display: none !important;
+}

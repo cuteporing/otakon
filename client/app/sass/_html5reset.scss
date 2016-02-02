@@ -1,0 +1,43 @@
+@mixin box-sizing($bb) {
+	 -moz-box-sizing: $bb;
+	 -webkit-box-sizing: $bb;
+	 box-sizing: $bb;
+}
+
+body, h1, h2, h3, p, ul, li, form, input, header, nav, article, section, dialog, figure, aside, footer {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+textarea {
+  vertical-align: top;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+* {
+  outline: none !important;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a, a:hover {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+input[type="text"] {
+  -webkit-user-select: text;
+}
