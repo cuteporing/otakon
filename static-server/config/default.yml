@@ -1,0 +1,8 @@
+domain: "*"
+port: 3000
+bodyParser:
+  json:
+    limit: '10mb'
+  urlencoded:
+    limit: '10mb'
+    extended: true
