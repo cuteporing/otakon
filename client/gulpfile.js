@@ -109,7 +109,6 @@ gulp.task("copy", function() {
 //================================================
 gulp.task("development", function() {
   runSequence(
-      "compassCompile",
      "clean",
     ["compassCompile",
      "vendorsCompile",
