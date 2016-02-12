@@ -98,6 +98,8 @@ gulp.task("copy", function() {
     .pipe(gulp.dest(DIST + "/images"));
   gulp.src(SRC + "/lib/jquery-1.11.3.min.js")
     .pipe(gulp.dest(DIST + "/lib/"));
+  gulp.src(SRC + "/js/view/*")
+    .pipe(gulp.dest(DIST + "/js/view"));
 });
 
 //================================================
@@ -107,6 +109,7 @@ gulp.task("copy", function() {
 //================================================
 gulp.task("development", function() {
   runSequence(
+      "compassCompile",
      "clean",
     ["compassCompile",
      "vendorsCompile",

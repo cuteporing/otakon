@@ -1,1 +1,52 @@
 @import "base";
+
+.nav {
+  margin: 10px;
+  &.left {
+    @extend .left;
+  }
+  &.right {
+    @extend .right;
+  }
+  .nav-circle {
+    > li {
+      transition: all .2s ease-in-out;
+      content: " ";
+      height: 6em;
+      width: 6em;
+      margin: 10px 2px;
+      background-color: #FFFFFF;
+      position: relative;
+      border: 3px solid #FFFFFF;
+      @extend .circle;
+      @extend .transparent-bg;
+      span {
+        transition: all .2s ease-in-out;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        @extend .circle;
+        background-color: #FFFFFF;
+        &:hover {
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          background-color: #EBA601;
+          @include scale(0.85);
+          @extend .solid-bg;
+        }
+      }
+      &:hover {
+        border-color: #EBA601;
+        background-color: transparent;
+        @include scale(1.25);
+        @extend .solid-bg;
+      }
+    }
+    &.horizontal {
+      > li {
+        float: left;
+      }
+    }
+  }
+}
