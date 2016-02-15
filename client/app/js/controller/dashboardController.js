@@ -6,10 +6,11 @@ $(function() {
     __templates : ["js/view/header.ejs"],
 
     __postInit: function() {
-      var dfd, prom1, promWhen;
+      var dfd, prom1, prom2, promWhen;
       dfd = this.deferred();
       prom1 = this.changeView(this, dfd, '#nav', 'nav', {}, true);
-      promWhen = h5.async.when(prom1);
+      prom2 = this.changeView(this, dfd, '#sub-nav1', 'sub-nav1', {}, true);
+      promWhen = h5.async.when(prom1, prom2);
       promWhen.done(function() {
         dfd.resolve();
       });

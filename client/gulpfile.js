@@ -110,8 +110,7 @@ gulp.task("copy", function() {
 gulp.task("development", function() {
   runSequence(
      "clean",
-    ["compassCompile",
-     "vendorsCompile",
+    ["vendorsCompile",
      "defineCompile",
      "htmlCompile",
      "controllersCompile"],

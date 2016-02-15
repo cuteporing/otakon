@@ -4,18 +4,18 @@ $(function(){
         var view = null;
         var myDfd = this.deferred();
         var json = {};
-        
+
         if (param !== undefined)
           $.extend(json, param);
-        
-        (isUpdate) ? 
+
+        (isUpdate) ?
             view = self.view.update(container,content,json)
           : view = self.view.append(container, content, json);
-         
+
         view.ready(function() {
           myDfd.resolve();
         });
-        
+
         return myDfd.promise();
       }
   };
